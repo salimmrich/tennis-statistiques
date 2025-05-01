@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging; // Utilisation du logger standard
+using Microsoft.Extensions.Logging; 
 using TennisStats.Application.Interfaces;
 using TennisStats.Domain.Entities;
 
@@ -41,22 +41,22 @@ namespace TennisStats.API.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Player>> GetPlayerById(int id)
         {
-            _logger.LogInformation("GetPlayerById appelé avec l'ID : {Id}", id); // Log avec LogInformation
+            _logger.LogInformation("GetPlayerById appelé avec l'ID : {Id}", id);
             try
             {
                 var player = await _playerService.GetPlayerByIdAsync(id);
                 if (player == null)
                 {
-                    _logger.LogWarning("Joueur avec l'ID {Id} non trouvé", id); // Log avec LogWarning
+                    _logger.LogWarning("Joueur avec l'ID {Id} non trouvé", id);
                     return NotFound();
                 }
 
-                _logger.LogInformation("Joueur avec l'ID {Id} récupéré avec succès", id); // Log avec LogInformation
+                _logger.LogInformation("Joueur avec l'ID {Id} récupéré avec succès", id); 
                 return Ok(player);
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Erreur survenue lors de la récupération du joueur avec l'ID {Id}", id); // Log avec LogError
+                _logger.LogError(ex, "Erreur survenue lors de la récupération du joueur avec l'ID {Id}", id); 
                 return BadRequest($"Une erreur est survenue : {ex.Message}");
             }
         }
