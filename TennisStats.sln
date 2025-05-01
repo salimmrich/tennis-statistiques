@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35913.81 d17.13
+VisualStudioVersion = 17.13.35913.81
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TennisStats.API", "TennisStats.API\TennisStats.API.csproj", "{AC4EECDF-C49F-4D32-9DBC-A751A9B19A07}"
 EndProject
@@ -12,6 +12,13 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TennisStats.Infrastructure", "TennisStats.Infrastructure\TennisStats.Infrastructure.csproj", "{DAAB9A09-1183-415E-8900-5C93A7EAC2AF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TennisStats.Tests", "TennisStats.Tests\TennisStats.Tests.csproj", "{C6002CCC-5A96-401C-8960-A5CD89F9C6D5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{3E86CDE6-83E7-4533-BF16-91D3EB373C22}"
+	ProjectSection(SolutionItems) = preProject
+		azure-deploy.yml = azure-deploy.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,6 +49,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3E86CDE6-83E7-4533-BF16-91D3EB373C22} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E6BDCBF9-1604-4FEF-B7A3-DC84DCBC4E8C}
